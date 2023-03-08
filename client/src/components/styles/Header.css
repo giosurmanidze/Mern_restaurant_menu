@@ -1,0 +1,30 @@
+.header img {
+  width: 100%;
+}
+
+.header a {
+  position: absolute;
+  right: 50px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+
+}
+
+@media screen and (max-width: 800px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  .header a {
+    transform: translate(50%,-50%);
+    margin: auto 0;
+    right: 50%;
+    top: 115%;
+  }
+}

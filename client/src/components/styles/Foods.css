@@ -1,0 +1,16 @@
+.all__foods {
+  padding-top: 100px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media screen and (max-width:715px) {
+ .all__foods {
+  gap: 1rem;
+ }
+}
