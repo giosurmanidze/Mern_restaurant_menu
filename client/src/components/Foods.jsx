@@ -19,6 +19,7 @@ const Foods = () => {
       }
     };
     fetchFoods();
+
   }, []);
   return (
     <div className="all__foods">
