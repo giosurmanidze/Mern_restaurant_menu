@@ -37,13 +37,17 @@
   font-family: "Inter", sans-serif;
   font-weight: 700;
 }
-.dashboard form div input {
+.dashboard form div input,textarea {
   width: 100%;
-  border: 1px solid rgb(152, 43, 4);
+  border: 1px solid rgb(203, 54, 0);
   outline: none;
   height: 30px;
   border-radius: 5px;
+  padding-left: 10px;
   
+}
+textarea {
+  height: 70px;
 }
 .dashboard form button {
   width: 150px;
@@ -55,4 +59,13 @@
   letter-spacing: 2px;
   border-radius: 10px;
   cursor: pointer;
+}
+.arrow {
+  margin-top: 3px;
+  
+}
+.title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

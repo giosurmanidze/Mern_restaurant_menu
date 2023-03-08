@@ -1,5 +1,10 @@
 const express = require("express");
-const { createFood, getFoods, getSingleFood } = require("../controllers/foodControler");
+const {
+  createFood,
+  getFoods,
+  getSingleFood,
+} = require("../controllers/foodControler");
+const multer = require("multer");
 
 const router = express.Router();
 
@@ -9,7 +14,7 @@ router.get("/", getFoods);
 // GET single food
 router.get("/:id", getSingleFood);
 
-// POST new food
+
 router.post("/", createFood);
 
 module.exports = router;

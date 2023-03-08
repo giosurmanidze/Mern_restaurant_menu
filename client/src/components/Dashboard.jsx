@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import "./styles/Dashboard.css";
 import { motion } from "framer-motion";
 import Fade from "react-reveal/Fade";
-import { BiArrowBack } from "react-icons/bi";
+import { IoArrowUndo } from "react-icons/io5";
 import { FoodContext } from "../context/FoodContext";
 import env from "react-dotenv";
+import {IoFastFoodOutline} from 'react-icons/io5'
 
 const Dashboard = () => {
   const { pageVariants } = useContext(FoodContext);
@@ -20,7 +21,7 @@ const Dashboard = () => {
   const handleChange = (e) => {
     const value =
       e.target.name === "price" ? Number(e.target.value) : e.target.value;
-    setData({
+      setData({
       ...data,
       [e.target.name]: value,
     });
@@ -49,9 +50,10 @@ const Dashboard = () => {
         url: "",
       });
       setError(null);
-      console.log("new food is added", json);
     }
   };
+
+  console.log(data)
 
   return (
     <motion.div
@@ -61,10 +63,10 @@ const Dashboard = () => {
       animate="enter"
       exit="exit"
     >
-      <Link to={"/"}>
-        <BiArrowBack size={25} />
+      <Link to={"/"} className="arrow">
+        <IoArrowUndo color="rgb(203, 54, 0)" size={25} />
       </Link>
-      <h1>კერძის დამატება</h1>
+      <h1 className="title">კერძის დამატება <IoFastFoodOutline color="rgb(203, 54, 0)" fontWeight={700} fontSize={27}/></h1>
       <form onSubmit={handleSubmit}>
         <Fade bottom>
           <div>
@@ -78,12 +80,11 @@ const Dashboard = () => {
           </div>
           <div>
             აღწერა
-            <input
-              type="text"
+            <textarea  type="text"
               name="desc"
               value={data.desc}
-              onChange={handleChange}
-            />
+              onChange={handleChange}></textarea>
+           
           </div>
           <div>
             ფასი
