@@ -68,3 +68,12 @@ textarea {
   align-items: center;
   gap: 5px;
 }
+
+select {
+  height: 35px;
+  width: 100%;
+  border: 1px solid rgb(203, 54, 0);
+  outline: none;
+  border-radius: 5px;
+  padding-left: 10px;
+}

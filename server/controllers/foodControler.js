@@ -28,7 +28,7 @@ const getSingleFood = async (req, res) => {
 // Create new food
 
 const createFood = async (req, res) => {
-  const { title, price, url, desc } = req.body;
+  const { title, price, url,category, desc } = req.body;
 
   // add doc to db
   try {
@@ -37,6 +37,7 @@ const createFood = async (req, res) => {
       price,
       url,
       desc,
+      category
     });
 
     res.status(200).json(food);

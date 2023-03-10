@@ -1,7 +1,6 @@
 import "./styles/DeleteFood.css";
 import { MdOutlineNoFood } from "react-icons/md";
 import env from "react-dotenv";
-import Fade from "react-reveal/Fade";
 import { useContext, useState } from "react";
 import { FoodContext } from "../context/FoodContext";
 
@@ -35,7 +34,6 @@ const DeleteFood = () => {
       </h1>
       <div className="content__container">
           <p>კერძის დასახელება:</p>
-          <Fade button>
           <div>
             <input
               type="text"
@@ -46,7 +44,6 @@ const DeleteFood = () => {
               წაშლა
             </button>
           </div>
-          </Fade>
       </div>
       {/* {
         error && <p>სახელი არასწირია!</p>

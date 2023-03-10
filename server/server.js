@@ -35,3 +35,7 @@ mongoose
     });
   })
   .catch((error) => console.log(error));
+
+
+
+// restaurants.collection.drop()

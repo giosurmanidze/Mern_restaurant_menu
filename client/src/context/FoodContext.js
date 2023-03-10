@@ -31,11 +31,13 @@ export const FoodContextProvider = ({ children }) => {
     price: 0,
     url: "",
     desc: "",
-  });
+    category:""
+
+  })
 
   const handleChange = (e) => {
     const value =
-      e.target.name === "price" ? Number(e.target.value) : e.target.value;
+      e.target.name === "price" ? parseFloat(e.target.value) : e.target.value;
     setData({
       ...data,
       [e.target.name]: value,

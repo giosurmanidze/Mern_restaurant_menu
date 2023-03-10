@@ -16,7 +16,11 @@ const foodSchema = new Schema(
       type: String,
       required: true,
     },
-    desc:String
+    category: {
+      type: String,
+      required: true,
+    },
+    desc: String,
   },
   { timestamps: true }
 );

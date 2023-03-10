@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import Fade from "react-reveal/Fade";
 import { FoodContext } from "../context/FoodContext";
 import env from "react-dotenv";
-import {IoFastFoodOutline} from 'react-icons/io5'
+import { IoFastFoodOutline } from "react-icons/io5";
+
+const category = ["ცომეული", "წვნიანი", "სალათები", "თევზეული"];
 
 const AddFood = () => {
   const { pageVariants, handleChange, data, setData } = useContext(FoodContext);
@@ -13,7 +15,7 @@ const AddFood = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch(`${env.REACT_APP_BASE_URL}/api/foods`, {
+    const response = await fetch(`${env.REACT_APP_BASE_URL}/api/foods/`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -31,10 +33,13 @@ const AddFood = () => {
         price: 0,
         desc: "",
         url: "",
+        category:""
       });
       setError(null);
     }
   };
+
+  console.log(data)
 
   return (
     <motion.div
@@ -44,8 +49,14 @@ const AddFood = () => {
       animate="enter"
       exit="exit"
     >
-     
-      <h1 className="title">კერძის დამატება <IoFastFoodOutline color="rgb(203, 54, 0)" fontWeight={700} fontSize={27}/></h1>
+      <h1 className="title">
+        კერძის დამატება{" "}
+        <IoFastFoodOutline
+          color="rgb(203, 54, 0)"
+          fontWeight={700}
+          fontSize={27}
+        />
+      </h1>
       <form onSubmit={handleSubmit}>
         <Fade bottom>
           <div>
@@ -59,16 +70,17 @@ const AddFood = () => {
           </div>
           <div>
             აღწერა
-            <textarea  type="text"
+            <textarea
+              type="text"
               name="desc"
               value={data.desc}
-              onChange={handleChange}></textarea>
-           
+              onChange={handleChange}
+            ></textarea>
           </div>
           <div>
             ფასი
             <input
-              type="text"
+              type="number"
               name="price"
               value={data.price}
               onChange={handleChange}
@@ -83,9 +95,26 @@ const AddFood = () => {
               onChange={handleChange}
             />
           </div>
+          <div>
+            კატეგორია
+            <select
+              name="category"
+              value={data.category ? data.category : "none"}
+              onChange={handleChange}
+            >
+              <option value="none" className="opt" selected disabled hidden>
+                აირჩიეთ ხარისხი
+              </option>
+              {category?.map((option, i) => (
+                <option key={i} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </div>
           <button>დამატება</button>
         </Fade>
-        {error && <div className="error">{error}</div>}
+        {/* {error && <div className="error">{error}</div>} */}
       </form>
     </motion.div>
   );
