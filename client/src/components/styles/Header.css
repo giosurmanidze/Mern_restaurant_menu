@@ -2,17 +2,16 @@
   width: 100%;
 }
 
-.header a {
+.header .dashboard__link {
   position: absolute;
   right: 50px;
   top: 10px;
   font-size: 20px;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   text-decoration: none;
   color: black;
   font-weight: 700;
-
 }
 
 @media screen and (max-width: 800px) {
@@ -21,10 +20,16 @@
     flex-direction: column;
     position: relative;
   }
-  .header a {
-    transform: translate(50%,-50%);
+  .header .dashboard__link {
+    transform: translate(50%, -50%);
     margin: auto 0;
     right: 50%;
     top: 115%;
   }
+}
+
+.header .arrow {
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }

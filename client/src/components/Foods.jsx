@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import FoodCard from "./FoodCard";
 import "./styles/Foods.css";
 import env from "react-dotenv";
+import { FoodContext } from "../context/FoodContext";
 
 const Foods = () => {
-  const [foods, setFoods] = useState(null);
-
+  const {foods, dispatch} = useContext(FoodContext)
 
   useEffect(() => {
     const fetchFoods = async () => {
@@ -15,12 +15,13 @@ const Foods = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setFoods(data);
+        dispatch({type: "SET_FOODS", payload: data})
       }
     };
     fetchFoods();
 
   }, []);
+
   return (
     <div className="all__foods">
       {foods &&

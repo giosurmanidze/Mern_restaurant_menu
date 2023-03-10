@@ -1,73 +1,36 @@
-.dashboard {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.dashboard a {
-  position: absolute;
-  left: -5px;
-  top: -205px;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  color: black;
-}
-.dashboard h1 {
-  font-family: 'Inter', sans-serif;
-  color: black;
-  font-weight: 700;
-  font-size: 23px;
-}
+.dashboard__screen {
+    width: 100%;
+    height: 60vh; 
 
-.dashboard form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
-  align-items: center;
 }
-.dashboard form div {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  gap: .3rem;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
+.dashboard__screen div {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
 }
-.dashboard form div input,textarea {
-  width: 100%;
-  border: 1px solid rgb(203, 54, 0);
-  outline: none;
-  height: 30px;
-  border-radius: 5px;
-  padding-left: 10px;
-  
+.dashboard__screen div a {
+    width: 60%;
+    height: 40px;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-textarea {
-  height: 70px;
+.dashboard__screen div a:hover {
+    transform: scale(1.05);
 }
-.dashboard form button {
-  width: 150px;
-  height: 35px;
-  border: none;
-  background-color: orangered;
-  color: #fff;
-  font-size: 15px;
-  letter-spacing: 2px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-top: 30px;
+.dashboard__screen div a:first-child {
+    background-color: rgb(5, 101, 32);
 }
-.arrow {
-  margin-top: 5px;
-  
-}
-.title {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.dashboard__screen div a:last-child {
+    background-color: rgb(214, 2, 2);
 }

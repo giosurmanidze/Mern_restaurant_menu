@@ -1,0 +1,70 @@
+.dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.dashboard a {
+  position: absolute;
+  left: -5px;
+  top: -205px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+.dashboard h1 {
+  font-family: 'Inter', sans-serif;
+  color: black;
+  font-weight: 700;
+  font-size: 23px;
+}
+
+.dashboard form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  align-items: center;
+}
+.dashboard form div {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  gap: .3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+.dashboard form div input,textarea {
+  width: 100%;
+  border: 1px solid rgb(203, 54, 0);
+  outline: none;
+  height: 35px;
+  border-radius: 5px;
+  padding-left: 10px;
+  
+}
+textarea {
+  height: 70px;
+}
+.dashboard form button {
+  width: 160px;
+  height: 35px;
+  border: none;
+  background-color: orangered;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

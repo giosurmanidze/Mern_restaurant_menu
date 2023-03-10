@@ -1,0 +1,54 @@
+.delete__food .title {
+  font-family: "Inter", sans-serif;
+  color: black;
+  font-weight: 700;
+  font-size: 23px;
+}
+.delete__food {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.delete__food .content__container {
+  display: flex;
+  gap: 1rem;
+  height: 30vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.delete__food .content__container div {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+.content__container p{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.delete__btn {
+  width: 160px;
+  height: 35px;
+  border: none;
+  background-color: #d60b0b;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.content__container div input {
+    width: 100%;
+    border: 1px solid rgb(203, 54, 0);
+    outline: none;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 10px;
+}

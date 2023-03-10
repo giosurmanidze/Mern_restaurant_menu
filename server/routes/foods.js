@@ -3,8 +3,8 @@ const {
   createFood,
   getFoods,
   getSingleFood,
+  deleteFood
 } = require("../controllers/foodControler");
-const multer = require("multer");
 
 const router = express.Router();
 
@@ -16,5 +16,7 @@ router.get("/:id", getSingleFood);
 
 
 router.post("/", createFood);
+
+router.delete("/:id", deleteFood)
 
 module.exports = router;
