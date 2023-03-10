@@ -103,7 +103,7 @@ const AddFood = () => {
               onChange={handleChange}
             >
               <option value="none" className="opt" selected disabled hidden>
-                აირჩიეთ ხარისხი
+                აირჩიეთ კატეგორია
               </option>
               {category?.map((option, i) => (
                 <option key={i} value={option}>

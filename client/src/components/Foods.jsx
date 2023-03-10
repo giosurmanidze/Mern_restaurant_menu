@@ -55,7 +55,7 @@ const Foods = () => {
         {data?.length === 0 ? (
           <div className="status">
             <p className="not__found">არ მოიძებნა:</p>
-            <BsFillEmojiDizzyFill size={35} color="#07128b" />
+            <BsFillEmojiDizzyFill size={35} color="#07128b"/>
           </div>
         ) : (
           ""

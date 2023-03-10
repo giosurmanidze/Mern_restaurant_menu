@@ -21,7 +21,7 @@ const CustomSelect = ({changedValue, selected}) => {
     <div onClick={show} className="main__div">
       <p>{selected}</p>
       <button type="button">
-        <MdArrowDropDown style={{ fontSize: "30px" }} />
+        <MdArrowDropDown style={{ fontSize: "30px",paddingTop:"5px",paddingLeft:"5px" }} />
       </button>
 
       {isOpen && (
